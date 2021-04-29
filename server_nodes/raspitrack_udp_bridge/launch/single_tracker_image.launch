@@ -1,0 +1,11 @@
+<launch>
+   <node name="raspi_ir_bridge" pkg="raspitrack_udp_bridge" type='image_publisher'>
+      <param name="ip_address" value="10.42.0.1" type="string" />
+      <param name="port" value="5000" type="int" />
+      <param name="image_width" value="640" type="int" />
+      <param name="image_height" value="480" type="int" />      
+      <param name="calib_file_url" value="file:///home/rouholla/raspi-ir-tracker/catkin_ws/ost.yaml" type="string" />
+      <remap from='/raspi_ir_bridge/raspi_tracker/camera_info' to='/camera/camera_info' />
+      <remap from='/raspi_ir_bridge/raspi_tracker/raw_image' to='/camera/image_raw' />
+   </node>
+</launch>
