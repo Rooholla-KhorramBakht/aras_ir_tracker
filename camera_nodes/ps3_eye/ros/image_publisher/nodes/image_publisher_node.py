@@ -12,11 +12,11 @@ from cv_bridge import CvBridge, CvBridgeError
 #from camera_calibration_parsers import readCalibration
 from subprocess import call
 import subprocess
-from camera_image_publisher.srv import set_gain, set_exposure
+#from image_publisher.srv import set_gain, set_exposure
 import threading
 import time
 from dynamic_reconfigure.server import Server
-from camera_image_publisher.cfg import camera_cfgsConfig
+from image_publisher.cfg import camera_cfgsConfig
 from utils import *
 
 def cfgs_callback(config, level):
