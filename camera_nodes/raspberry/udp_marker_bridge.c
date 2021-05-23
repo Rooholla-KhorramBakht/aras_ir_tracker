@@ -66,7 +66,7 @@ main(int argc, char** argv)
     //IPC Socket
     unlink(NAME);
     int sock, length;
-    struct sockaddr_un name;
+    struct sockaddr_un name; //unix socket
     /* Create socket from which to read. */
     sock = socket(AF_UNIX, SOCK_DGRAM, 0);
     if (sock < 0) {

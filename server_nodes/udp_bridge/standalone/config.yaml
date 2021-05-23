@@ -1,0 +1,10 @@
+---
+  play_from_video: true
+  local_ip: "127.0.0.1"
+  camera_ports:
+    - 5000
+    - 5001
+
+  record: true
+  path: './recorded_data'
+  print_markers: true

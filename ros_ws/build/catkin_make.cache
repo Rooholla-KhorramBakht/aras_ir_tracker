@@ -1,0 +1,2 @@
+image_publisher
+-DCATKIN_DEVEL_PREFIX=/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/install -G Unix Makefiles
