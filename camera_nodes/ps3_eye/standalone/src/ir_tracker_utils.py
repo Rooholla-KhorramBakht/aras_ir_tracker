@@ -62,7 +62,10 @@ class markerExteractor(object):
             for key in keys_in_roi:
                 #Calculate the global coordinate of marker points. The points are returned in (X(Col),Y(Row)) coordinate.
                 marker_points.append([key.pt[0]+self.ROIs.astype('float32')[i,2],key.pt[1]+self.ROIs.astype('float32')[i,0]])
-        return np.array(marker_points)
+        if len(marker_points)>0:
+            return np.array(marker_points)
+        else:
+            return None
 
     def extract_from_video(self,video_file):
         cap=cv2.VideoCapture(video_file)

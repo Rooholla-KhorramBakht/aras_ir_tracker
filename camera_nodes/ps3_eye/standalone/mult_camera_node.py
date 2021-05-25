@@ -41,7 +41,7 @@ if __name__=='__main__':
     #Generate a list of capture devices/files
     if configs['reference_by_usb']:
         cam_dict=usb_ports2id(configs['cameras'])
-        ids_list=[cam_dict[configs['cameras']] for i in range(len(configs['cameras']))]
+        ids_list=[cam_dict[configs['cameras'][i]] for i in range(len(configs['cameras']))]
         cap_devices=[cv2.VideoCapture(id) for id in ids_list]
         #Configure the cameras
         for n in range(len(configs['cameras'])):
