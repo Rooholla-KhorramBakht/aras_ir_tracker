@@ -1,9 +1,9 @@
 ---
   reference_by_usb: true
-  play_from_video: true
+  play_from_video: false
   cameras:
-    - '0-3'
-    - '0-4'
+    - '0-1.1' #Camera #1
+    - '0-1.2' #Camera #2
   calib_files:
     - 'params/right_params.yml'
     - 'params/right_params.yml'

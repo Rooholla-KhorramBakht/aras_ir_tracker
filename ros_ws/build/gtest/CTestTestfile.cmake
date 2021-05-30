@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
 # Source directory: /usr/src/googletest
-# Build directory: /home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build/gtest
+# Build directory: /home/aras-station2/RaspiTrack/ros_ws/build/gtest
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

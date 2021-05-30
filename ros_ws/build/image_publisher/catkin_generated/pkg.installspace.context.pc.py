@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "roscpp;rospy;message_runtime".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "image_publisher"
-PROJECT_SPACE_DIR = "/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/install"
+PROJECT_SPACE_DIR = "/home/aras-station2/RaspiTrack/ros_ws/install"
 PROJECT_VERSION = "0.0.0"

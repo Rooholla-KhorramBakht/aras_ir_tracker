@@ -112,8 +112,8 @@ class cameraLoop():
         self.cap=cv2.VideoCapture(camera_id)
         self.cap.set(cv2.CAP_PROP_FPS,fps)
         self.cap.set(cv2.CAP_PROP_BUFFERSIZE,1)
-        self.cap.set(3,320)
-        self.cap.set(4,240)
+        self.cap.set(3,640)
+        self.cap.set(4,480)
         self.kill=False
     
     def loop(self):

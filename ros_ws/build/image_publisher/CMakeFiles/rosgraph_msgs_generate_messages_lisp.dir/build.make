@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/src
+CMAKE_SOURCE_DIR = /home/aras-station2/RaspiTrack/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build
+CMAKE_BINARY_DIR = /home/aras-station2/RaspiTrack/ros_ws/build
 
 # Utility rule file for rosgraph_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ image_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build: rosgr
 .PHONY : image_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 
 image_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
-	cd /home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build/image_publisher && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/aras-station2/RaspiTrack/ros_ws/build/image_publisher && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : image_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 
 image_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend:
-	cd /home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/src /home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/src/image_publisher /home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build /home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build/image_publisher /home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build/image_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aras-station2/RaspiTrack/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aras-station2/RaspiTrack/ros_ws/src /home/aras-station2/RaspiTrack/ros_ws/src/image_publisher /home/aras-station2/RaspiTrack/ros_ws/build /home/aras-station2/RaspiTrack/ros_ws/build/image_publisher /home/aras-station2/RaspiTrack/ros_ws/build/image_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : image_publisher/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
 
