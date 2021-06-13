@@ -1,0 +1,28 @@
+<package>
+  <name>image_publisher_cpp</name>
+  <version>1.0.0</version>
+  <description>
+  A ROS node to receive the pixel/marker data from the remote raspberry pi camera nodes.
+ </description>
+  <author>Rooholla Khorrambakht</author>
+  <maintainer email="learn.kho@gmail.com">Rooholla Khorrambakht</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <build_depend>image_transport</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>camera_info_manager</build_depend>
+
+  <run_depend>camera_info_manager</run_depend>
+  <run_depend>image_transport</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>std_msgs</run_depend> 
+  <run_depend>message_generation</run_depend>
+</package>

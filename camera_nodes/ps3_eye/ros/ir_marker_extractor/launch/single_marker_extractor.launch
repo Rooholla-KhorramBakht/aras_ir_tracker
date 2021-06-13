@@ -1,8 +1,10 @@
 <launch>
-<include file="./launch_mono_camera.launch" />
    <node name="ir_marker_extractor_mono" pkg="ir_marker_extractor" type='marker_extractor.py'>
-      <param name="debug_image" value="1" type="int" />
-      <remap from='/camera/image_raw' to='/mono_camera/image_raw' />
+      <param name="debug_image" value="true" type="bool" />      
+      <param name="remote_ip" value="127.0.0.1" type="string" /> 
+      <param name="udp_telemetry" value="true" type="bool" />
+      <param name="remote_port" value="5000" type="int" />
+      <remap from='/camera/image_raw' to='/image_publihser/raw_image' />
       <remap from='/ir_marker_extractor/debug_image' to='/ir_marker_extractor_mono/debug_image' />
       <remap from='/ir_marker_extractor/ir_markers' to='/ir_marker_extractor_mono/ir_markers' />
    </node>
