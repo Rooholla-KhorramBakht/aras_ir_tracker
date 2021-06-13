@@ -9,6 +9,12 @@
 # modified environment variables
 export LD_LIBRARY_PATH='/opt/ros/melodic/lib'
 export PKG_CONFIG_PATH='/opt/ros/melodic/lib/pkgconfig'
+<<<<<<< HEAD
+export PWD='/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build'
+export PYTHONPATH='/opt/ros/melodic/lib/python2.7/dist-packages'
+export ROS_PACKAGE_PATH='/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/src:/opt/ros/melodic/share'
+=======
 export PWD='/home/aras-station2/RaspiTrack/ros_ws/build'
 export PYTHONPATH='/opt/ros/melodic/lib/python2.7/dist-packages'
 export ROS_PACKAGE_PATH='/home/aras-station2/RaspiTrack/ros_ws/src:/opt/ros/melodic/share'
+>>>>>>> 8f134edb5f2f2d09e7f88932d006820e259388f7

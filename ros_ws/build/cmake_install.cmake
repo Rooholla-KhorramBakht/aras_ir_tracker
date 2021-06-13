@@ -130,8 +130,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+<<<<<<< HEAD
+  include("/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build/gtest/cmake_install.cmake")
+  include("/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build/image_publisher/cmake_install.cmake")
+  include("/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build/ir_marker_extractor/cmake_install.cmake")
+  include("/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build/image_publisher_cpp/cmake_install.cmake")
+  include("/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build/ros_image_recorder/cmake_install.cmake")
+=======
   include("/home/aras-station2/RaspiTrack/ros_ws/build/gtest/cmake_install.cmake")
   include("/home/aras-station2/RaspiTrack/ros_ws/build/image_publisher/cmake_install.cmake")
+>>>>>>> 8f134edb5f2f2d09e7f88932d006820e259388f7
 
 endif()
 
