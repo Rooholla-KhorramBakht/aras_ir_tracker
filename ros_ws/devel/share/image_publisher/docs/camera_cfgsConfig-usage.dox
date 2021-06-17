@@ -1,8 +1,0 @@
-\subsubsection usage Usage
-\verbatim
-<node name="camera_image_publisher" pkg="ir_marker_extractor" type="camera_image_publisher">
-  <param name="gain" type="int" value="1" />
-  <param name="exposure" type="int" value="10" />
-</node>
-\endverbatim
-

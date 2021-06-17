@@ -1,8 +1,8 @@
-# Install script for directory: /home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/src/image_publisher
+# Install script for directory: /home/aras-station2/RaspiTrack/ros_ws/src/image_publisher
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/aras-station2/RaspiTrack/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,40 +38,40 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/image_publisher" TYPE FILE FILES "/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/devel/include/image_publisher/camera_cfgsConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/image_publisher" TYPE FILE FILES "/home/aras-station2/RaspiTrack/ros_ws/devel/include/image_publisher/camera_cfgsConfig.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/image_publisher" TYPE FILE FILES "/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/devel/lib/python2.7/dist-packages/image_publisher/__init__.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/image_publisher" TYPE FILE FILES "/home/aras-station2/RaspiTrack/ros_ws/devel/lib/python2.7/dist-packages/image_publisher/__init__.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/devel/lib/python2.7/dist-packages/image_publisher/cfg")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/aras-station2/RaspiTrack/ros_ws/devel/lib/python2.7/dist-packages/image_publisher/cfg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/image_publisher" TYPE DIRECTORY FILES "/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/devel/lib/python2.7/dist-packages/image_publisher/cfg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/image_publisher" TYPE DIRECTORY FILES "/home/aras-station2/RaspiTrack/ros_ws/devel/lib/python2.7/dist-packages/image_publisher/cfg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/image_publisher/srv" TYPE FILE FILES
-    "/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/src/image_publisher/srv/set_gain.srv"
-    "/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/src/image_publisher/srv/set_exposure.srv"
+    "/home/aras-station2/RaspiTrack/ros_ws/src/image_publisher/srv/set_gain.srv"
+    "/home/aras-station2/RaspiTrack/ros_ws/src/image_publisher/srv/set_exposure.srv"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build/image_publisher/catkin_generated/installspace/image_publisher.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/aras-station2/RaspiTrack/ros_ws/build/image_publisher/catkin_generated/installspace/image_publisher.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/image_publisher/cmake" TYPE FILE FILES
-    "/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build/image_publisher/catkin_generated/installspace/image_publisherConfig.cmake"
-    "/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/build/image_publisher/catkin_generated/installspace/image_publisherConfig-version.cmake"
+    "/home/aras-station2/RaspiTrack/ros_ws/build/image_publisher/catkin_generated/installspace/image_publisherConfig.cmake"
+    "/home/aras-station2/RaspiTrack/ros_ws/build/image_publisher/catkin_generated/installspace/image_publisherConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/image_publisher" TYPE FILE FILES "/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/src/image_publisher/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/image_publisher" TYPE FILE FILES "/home/aras-station2/RaspiTrack/ros_ws/src/image_publisher/package.xml")
 endif()
 

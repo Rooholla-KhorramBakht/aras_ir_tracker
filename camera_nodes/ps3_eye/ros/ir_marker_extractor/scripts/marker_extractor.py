@@ -9,6 +9,8 @@ from pyclustering.cluster.bsas import bsas
 from dynamic_reconfigure.server import Server
 from ir_marker_extractor.cfg import ir_marker_extractor_cfgsConfig
 import numpy as np
+from telemetry_utils import *
+from utils import *
 
 def recongigureator_callback(config,level):
     #Image Thresholding Parameters
@@ -121,7 +123,7 @@ class markerExteractor():
         for key in blubs:
             marker_points.append([key.pt[0] ,key.pt[1]])
         return 0,np.array(marker_points)
-        
+
 class process():
     def __init__(self,debug_image):
         self.debug_image=debug_image
@@ -135,7 +137,7 @@ class process():
             img_color=cv2.cvtColor(cv_image,cv2.COLOR_GRAY2BGR)
             if markers is not None:
                 for marker in markers:
-                    cv2.circle(img_color,(int(round(marker[0])), int(round(marker[1]))), 3, 
+                    cv2.circle(img_color,(int(round(marker[0])), int(round(marker[1]))), 3,
                                                                            (255,0,255),-1)
             debug_image=self.bridge.cv2_to_imgmsg(img_color)
         else:
@@ -151,12 +153,16 @@ def image_callback(image):
         markers_msg.status=status
         markers_msg.header.stamp=image.header.stamp
         pub.publish(markers_msg)
+        if par_mng.params['~udp_telemetry']:
+            telem.transmit_data([np.array([-2,-2]).reshape(1,2)])
         return
     if status==-1 or len(markers)==0: #no markers in the image
         #print('no markers in the image')
         markers_msg.status=status
         markers_msg.header.stamp=image.header.stamp
         pub.publish(markers_msg)
+        if par_mng.params['~udp_telemetry']:
+            telem.transmit_data([np.array([-1,-1]).reshape(1,2)])
         return
     marker_list=[]
     for marker in markers:
@@ -164,17 +170,26 @@ def image_callback(image):
     markers_msg.status=status
     markers_msg.header.stamp=image.header.stamp
     markers_msg.markers=marker_list
+
+    if par_mng.params['~udp_telemetry']:
+        telem.transmit_data(processed_points_list)
     #[Point(np.random.randn(),2,3),Point(4,5,6)]#
     pub.publish(markers_msg)
-    
+
 if __name__ =='__main__':
     rospy.init_node('ir_marker_extractor_node')
-    if rospy.has_param('~debug_image'):
-        debug_image=rospy.get_param('~debug_image')
+    par_mng = paramManager()
+    par_mng.load_params()
+
+    if par_mng.params['~udp_telemetry']:
+        telem = udp_telemetry()
+        telem.OUT_IP = par_mng.params['~remote_ip']
+        telem.OUT_PORT = par_mng.params['~remote_port']
+
+    if par_mng.params['~debug_image']:
         debug_image_pub=rospy.Publisher('/ir_marker_extractor/debug_image',Image,queue_size=1)
-    else:
-        debug_image=False
-    node_processor=process(debug_image)
+
+    node_processor=process(par_mng.params['~debug_image'])
     pub=rospy.Publisher('/ir_marker_extractor/ir_markers',ir_markers,queue_size=1)
     rospy.Subscriber('/camera/image_raw',Image,image_callback,queue_size=1)
     srv=Server(ir_marker_extractor_cfgsConfig,recongigureator_callback)

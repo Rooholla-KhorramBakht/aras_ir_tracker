@@ -1,4 +1,4 @@
-prefix=/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/install
+prefix=/home/aras-station2/RaspiTrack/ros_ws/install
 
 Name: image_publisher
 Description: Description of image_publisher

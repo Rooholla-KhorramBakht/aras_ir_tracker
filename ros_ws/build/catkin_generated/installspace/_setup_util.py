@@ -268,7 +268,11 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = r'/home/rouholla/myData/Robotics/libs_and_tools/IR-Tracker-Repos/raspi-ir-tracker/catkin_ws/devel;/opt/ros/melodic'.split(';')
+<<<<<<< HEAD
+            CMAKE_PREFIX_PATH = r'/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/devel;/opt/ros/melodic'.split(';')
+=======
+            CMAKE_PREFIX_PATH = r'/home/aras-station2/RaspiTrack/ros_ws/devel;/opt/ros/melodic'.split(';')
+>>>>>>> 8f134edb5f2f2d09e7f88932d006820e259388f7
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

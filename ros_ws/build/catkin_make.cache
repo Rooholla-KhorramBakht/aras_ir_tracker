@@ -1,2 +1,7 @@
-image_publisher
+<<<<<<< HEAD
+image_publisher:image_publisher_cpp:ir_marker_extractor:ros_image_recorder
 -DCATKIN_DEVEL_PREFIX=/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/rouholla/myData/Robotics/projects/RaspiTrack/ros_ws/install -G Unix Makefiles
+=======
+image_publisher
+-DCATKIN_DEVEL_PREFIX=/home/aras-station2/RaspiTrack/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/aras-station2/RaspiTrack/ros_ws/install -G Unix Makefiles
+>>>>>>> 8f134edb5f2f2d09e7f88932d006820e259388f7
