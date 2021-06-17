@@ -80,7 +80,11 @@ if __name__=='__main__':
                     if configs['display']:
                         for i in range(points.shape[0]):
                             cv2.circle(img,(int(round(points[i,0])), int(round(points[i,1]))), 2, (255,0,255), -1)
-                    processed_points_list.append(udist.process(points)[:,0:2].reshape(-1,2))
+                    if configs['apply_KD']:
+                        processed_points_list.append(udist.process(points)[:,0:2].reshape(-1,2))
+                    else:
+                        processed_points_list.append(points.reshape(-1,2))
+
                 else:
                     processed_points_list.append(np.array([-1,-1]).reshape(1,2))
 

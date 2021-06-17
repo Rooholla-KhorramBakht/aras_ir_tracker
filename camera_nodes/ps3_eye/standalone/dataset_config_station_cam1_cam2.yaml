@@ -2,15 +2,16 @@
   reference_by_usb: true
   play_from_video: true
   cameras:
-    - '0-5' #cam 1
-    - '0-6' #cam 2
+    - '0-6' #cam 1
+    - '0-5' #cam 2
+  apply_KD: false
   calib_files:
     - 'params/cam1_params.yaml'
     - 'params/cam2_params.yaml'
   display: true
-  print_markers: false
+  print_markers: true
   remote_ip: "192.168.1.4"
   remote_port: 5000
   fps: 50
-  gain: 50
+  gain: 30
   exposure: 10
