@@ -1,0 +1,14 @@
+---
+  reference_by_usb: true
+  play_from_video: false
+  cameras:
+    - '0-7'
+  calib_files:
+    - 'params/left_params.yaml'
+  display: true
+  print_markers: false
+  remote_ip: "192.168.1.1"
+  remote_port: 5000
+  fps: 50
+  gain: 10
+  exposure: 30

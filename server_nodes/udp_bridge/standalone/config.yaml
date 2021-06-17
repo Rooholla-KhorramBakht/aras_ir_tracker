@@ -1,10 +1,10 @@
 ---
-  play_from_video: true
-  local_ip: "192.168.1.1"
+  local_ip: "192.168.1.4"
   camera_ports:
     - 5000
     - 5001
+    - 5002
 
   record: true
-  path: './recorded_data'
+  path: '/home/hamedlovesrooholla/mnt/'
   print_markers: true

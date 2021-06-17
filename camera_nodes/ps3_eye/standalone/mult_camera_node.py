@@ -16,8 +16,8 @@ class paramclass():
     max_markers: int=1
     max_clusters: int=8
     threshold: int= 20
-    minThreshold: int= 50;
-    maxThreshold: int= 255;
+    minThreshold: int= 50
+    maxThreshold: int= 255
     filterByArea: bool= True
     minArea = 0
     filterByCircularity: bool= True
