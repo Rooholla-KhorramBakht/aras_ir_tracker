@@ -1,3 +1,0 @@
-pyclustering
-dataclasses
-tqdm

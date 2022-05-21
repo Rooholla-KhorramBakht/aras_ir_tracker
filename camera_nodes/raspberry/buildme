@@ -1,5 +1,0 @@
-gcc -lm -lmmal_core -lpthread -lwiringPi -lmmal_util -lmmal_vc_client -lvcos -lbcm_host -I/opt/vc/include/ -I/opt/vc/include/interface/vctypes/ -L/opt/vc/lib/ -o raspisync_tracker raspisync_tracker.c RaspiCLI.c pll_controller.c clustering.c
-gcc -o udp_pixel_bridge udp_pixel_bridge.c
-gcc -o udp_marker_bridge udp_marker_bridge.c
-
-
