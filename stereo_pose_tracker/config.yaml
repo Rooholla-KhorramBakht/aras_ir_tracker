@@ -5,11 +5,14 @@
   cam1_id:   0
   cam2_port: 5000
   cam2_id:   1
+
+  matlab_ip: "192.168.1.3"
+  matlab_port: 5500
   
-  cam1_params_path: '/home/rouholla/myData/Robotics/projects/RaspiTrack/server_nodes/reconstruction/Batch/recorded_data/planar/5002_0.yaml'
-  cam2_params_path: '/home/rouholla/myData/Robotics/projects/RaspiTrack/server_nodes/reconstruction/Batch/recorded_data/planar/5002_1.yaml'
+  cam1_params_path: 'params/cam1.yaml'
+  cam2_params_path: 'params/cam2.yaml'
   max_markers_per_image: 1
-  ext_params_path: '/home/rouholla/myData/Robotics/projects/RaspiTrack/server_nodes/reconstruction/Batch/ext_params.pckl'
+  ext_params_path: 'params/ext_params.pckl'
   record: false
-  path: '/home/ust0/IR_Tracker_WS/RaspiTrack/server_nodes/udp_bridge/standalone/dataset_tmp_dir'
+  path: 'dataset_tmp_dir'
   print_markers: ture

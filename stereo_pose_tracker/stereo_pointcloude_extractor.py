@@ -1,3 +1,4 @@
+from distutils.command.config import config
 import numpy as np
 import yaml
 import pickle
@@ -35,9 +36,8 @@ def callback(reception_stamp, data):
     if cam1 in data[1] and cam2 in data[1]:
         markers_in_cam1 = data[1][cam1]
         markers_in_cam2 = data[1][cam2]
-        print(markers_in_cam1.shape)
-        if markers_in_cam1.shape[0] > configs['max_markers_per_image'] and \
-           markers_in_cam2.shape[0]>configs['max_markers_per_image']:
+        if markers_in_cam1.shape[0] >= configs['max_markers_per_image'] and \
+           markers_in_cam2.shape[0]>=configs['max_markers_per_image']:
            # is any marker visible in the image? if not, you'll get [-1,-1] with np.sum(x)=-2
             if np.sum(markers_in_cam1)!=-2 and np.sum(markers_in_cam2)!=-2:
                 x1 = markers_in_cam1[0,...]
@@ -52,15 +52,23 @@ def callback(reception_stamp, data):
                 print('Reprojection Error Before BA:')
                 print(np.linalg.norm(x1_undist-x1_proj),
                       np.linalg.norm(x2_undist-x2_proj))
-
-                # ba_optimizer.run(x1_undist.reshape(-1,2), x2_undist.reshape(-1,2), landmarks.reshape(-1,3))
-                # print(ba_optimizer.L)
+                # ba_optimizer.run(x1_undist[0:2].reshape(-1,2), 
+                #                  x2_undist[0:2].reshape(-1,2), 
+                #                  landmarks[0:3].reshape(-1,3))
+                #Transmit 3D position of the landmark to the Matlab
+                telemetry_object.transmit_matlab(landmarks.squeeze()[0:3].tolist(), 
+                                                 configs['matlab_ip'], 
+                                                 configs['matlab_port'])
+                print(landmarks.squeeze()[0:3].tolist())
+                # x1_proj, x2_proj = stereoCamera.reproject(np.hstack([ba_optimizer.L.squeeze(),1]))
+                # print(np.linalg.norm(x1_undist-x1_proj),
+                #       np.linalg.norm(x2_undist-x2_proj))
 
     #Print received data if required
-    if configs['print_markers']:
-        print('---------------------------')
-        print(data)
-        print('---------------------------')
+    # if configs['print_markers']:
+    #     print('---------------------------')
+    #     print(data)
+    #     print('---------------------------')
 
 
     # # If required, record the marker locations into the recorder class
@@ -72,7 +80,7 @@ def termination_handling(signum,frame):
     print('\nTerminating')
     #Terminate the data reception threads by setting their running flags to false
     
-    rx_telemetry_object.RX_RUNNING = False
+    telemetry_object.RX_RUNNING = False
     #Store the data recorded into the recorder class into a file
     # if configs['record']:
     #     recorder.record_to_file()
@@ -109,12 +117,12 @@ if __name__=='__main__':
     rx_threads = []
     #Each UDP camera node is designated by a unique port number. For each prot, instantiate a telemetry object
 
-    rx_telemetry_object=udp_telemetry()
-    rx_telemetry_object.INPUT_IP = configs['local_ip']
-    rx_telemetry_object.INPUT_PORT = configs['local_port']
+    telemetry_object=udp_telemetry()
+    telemetry_object.INPUT_IP = configs['local_ip']
+    telemetry_object.INPUT_PORT = configs['local_port']
     # To handle the data reception of each telemetry object create a thread and hand over the callback function 
     # that should be called on the reception of each packet
-    rx_threads.append(threading.Thread(target=rx_telemetry_object.start_rx, args =(callback,)))
+    rx_threads.append(threading.Thread(target=telemetry_object.start_rx, args =(callback,)))
     # Handle Ctrl-C interrupt correctly by calling a function to clean up the system and story the data
     signal.signal(signal.SIGINT, termination_handling)
     # If required, we can record the received data into a file at the end of the node execution

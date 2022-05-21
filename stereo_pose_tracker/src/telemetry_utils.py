@@ -18,6 +18,13 @@ class udp_telemetry():
         byte_object = pickle.dumps(data)
         self.out_socket.sendto(byte_object, (self.OUT_IP, self.OUT_PORT))
 
+    def transmit_matlab(self,data_list, MATLAB_IP, MATLAB_PORT):
+        '''Transmit a list of double to the matlab simulink target'''
+        msg_format=f'{len(data_list)}d'
+        arguments =  [msg_format] + data_list
+        data=struct.pack(*arguments)        
+        self.out_socket.sendto(data, (MATLAB_IP, MATLAB_PORT))
+
     def start_rx(self,callback):
         self.in_sock = socket.socket(socket.AF_INET, # Internet
                      socket.SOCK_DGRAM) # UDP
