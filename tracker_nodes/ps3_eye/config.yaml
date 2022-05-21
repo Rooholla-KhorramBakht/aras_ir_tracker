@@ -1,0 +1,19 @@
+---
+  reference_by_usb: true
+  play_from_video: true
+  video_files:
+    - 'output_right.avi'    
+    - 'output_left.avi'
+  cameras:
+    - '0-7'
+  calib_files:
+    - 'params/left_params.yaml'    
+    - 'params/left_params.yaml'
+  apply_KD: false
+  display: true
+  print_markers: true
+  remote_ip: "127.0.0.1"
+  remote_port: 5000
+  fps: 10
+  gain: 10
+  exposure: 30
