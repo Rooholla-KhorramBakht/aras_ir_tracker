@@ -1,7 +1,7 @@
 # ARAS IR-Tracker
 ## Introduction
 
-ARAS IR-Tracker is an open source python infrared marker tracking system similar to the famous Vicon motion capture system. It was desgned and built at Advanced Robotics and Automation Systems (ARAS) laboratories at K.N.Toosi University of Technology in Tehran (link) to surve as referencing system for robotics research. 
+ARAS IR-Tracker is an open source python infrared marker tracking system similar to the famous Vicon motion capture system. It was desgned and built at Advanced Robotics and Automation Systems (ARAS) laboratories at K.N.Toosi University of Technology in Tehran (link) to serve as referencing system for robotics research. 
 
 The system is designed to be modular with each module encapsulating isolated functionalities required by the system. It is hardware agnostic and by simply designing new tracker nodes, various implementations of the camera system can be added.
 
