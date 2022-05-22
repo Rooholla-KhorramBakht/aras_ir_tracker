@@ -2,8 +2,8 @@
   reference_by_usb: true
   play_from_video: false
   video_files:
-    - 'output_right.avi'    
-    - 'output_left.avi'
+    - ' '    
+    - ' '
   cameras:
     - '0-8'
     - '0-2'
