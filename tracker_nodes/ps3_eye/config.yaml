@@ -8,8 +8,8 @@
     - '0-8'
     - '0-2'
   calib_files:
-    - 'params/cam1.yaml'    
-    - 'params/cam2.yaml'
+    - 'params/intrinsics/5002_0.yaml'    
+    - 'params/intrinsics/5002_1.yaml'
   apply_KD: false
   display: true
   print_markers: true

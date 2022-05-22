@@ -6,5 +6,5 @@
   camera_ports:
     - 5000
   record: true
-  path: 'dataset_tmp_dir'
+  path: 'record_dir'
   print_markers: false

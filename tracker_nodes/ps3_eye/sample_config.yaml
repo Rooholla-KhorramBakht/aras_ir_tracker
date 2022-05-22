@@ -8,8 +8,8 @@
     - '0-8'
     - '0-2'
   calib_files:
-    - 'sample_dataset/params/cam1.yaml'    
-    - 'sample_dataset/params/cam2.yaml'
+    - 'sample_dataset/intrinsics/5002_0.yaml'    
+    - 'sample_dataset/intrinsics/5002_1.yaml'
   apply_KD: false
   display: true
   print_markers: true
